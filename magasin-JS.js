@@ -19,10 +19,14 @@ let itemStocks = [4, 2, 6, 9];
 
 //Fonction ajouter au panier
 function addToQty(positionDeLarticle) {
-
     let quantity = parseInt(quantitiesList[positionDeLarticle].value);
-    quantity += 1;
-    quantitiesList[positionDeLarticle].value = quantity;
+    console.log("Quantite actuelle" + quantity);
+    console.log("Stock maximum" + itemStocks[positionDeLarticle]);
+    if (quantity < itemStocks[positionDeLarticle]) {
+        quantity++;
+        quantitiesList[positionDeLarticle].value = quantity;
+        calculateSubTotal();
+    }
 }
 
 //Attribuer les stocks d'item au max des input :
