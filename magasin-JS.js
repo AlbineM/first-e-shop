@@ -20,13 +20,14 @@ let itemStocks = [4, 2, 6, 9];
 //Fonction ajouter au panier
 function addToQty(positionDeLarticle) {
     let quantity = parseInt(quantitiesList[positionDeLarticle].value);
-    console.log("Quantite actuelle" + quantity);
+    console.log("Quantite avant click" + quantity);
     console.log("Stock maximum" + itemStocks[positionDeLarticle]);
     if (quantity < itemStocks[positionDeLarticle]) {
         quantity++;
         quantitiesList[positionDeLarticle].value = quantity;
         calculateSubTotal();
     }
+    console.log("quantite apres click" + quantity);
 }
 
 //Attribuer les stocks d'item au max des input :
@@ -44,37 +45,33 @@ attribStockQte();
 
 function changeText() {
     let i = 0;
-    for (i; i < listsLength.length; i++) {
-        if (itemStocks[i] === 2) {
-            availability[i].innerHTML = ' Plus que 2 articles !';
-        } else if (itemStocks[i] === 1) {
-            availability[i].innerHTML = ' Dernier article !';
-        } else if (itemStocks[i] === 0) {
-            availability[i].innerHTML = ' Plus d\'article en stock mais revenez le mois prochain pour les nouveautés !';
-        } else {
-            availability[i].innerHTML = 'Disponible';
+    for (i; i < listsLength; i++) {
+        console.log("ce qu'il y a dans le switch" + (itemStocks[i] - parseInt(quantitiesList[i].value)));
+        switch (itemStocks[i] - parseInt(quantitiesList[i].value)) {
+            case 2:
+                availability[i].innerHTML = ' Plus que 2 articles !';
+                break
+            case 1:
+                availability[i].innerHTML = ' Dernier article !';
+                break
+            case 0:
+                availability[i].innerHTML = ' Plus d\'article en stock mais revenez le mois prochain pour les nouveautés !';
+                availability[i].style = "color: red;";
+                break
+            default:
+                availability[i].innerHTML = 'Disponible';
+                break
         }
     }
 }
 
-//Fonction qui calcule le nouveau stock :
 
-
-function calculateNewStock() {
-    let i = 0;
-    for (i; i < itemStocks.length; i++) {
-        itemStocks[i] = itemStocks[i] - parseInt(quantitiesList[i].value);
-        changeText();
-    }
-}
 
 // Fonction calcule le sous-total par catégorie grâce aux déclarations précédentes
 function calculateSubTotal() {
-    calculateNewStock();
     produitsList.forEach((element, index) => {
         let i = index;
         let quantity = parseInt(quantitiesList[i].value);
-        calculateNewStock();
         let price = parseInt(pricesList[i].innerHTML);
         let newSubTotal = quantity * price;
         console.log(newSubTotal);
@@ -84,8 +81,8 @@ function calculateSubTotal() {
         } else {
             phrase[i].innerHTML = "Vous n'avez pas encore ajouté ce produit dans votre panier... Ce serait dommage de passer à côté !" //Petit kiff perso !
         }
-    })
-
+    });
+    changeText();
 }
 
 
