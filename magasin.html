@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Le magasin d'Albine</title>
+    <link href="magasin-style.css" rel="stylesheet">
+</head>
+<body>
+<header>
+    <nav class="menuBandeau">
+        <div class="owner">MISERY Albine</div>
+        <ul>
+            <a class="menuBandeau" href="#about">
+                <li>Accueil</li>
+            </a>
+            <a class="menuBandeau" href="#products">
+                <li>Produits</li>
+            </a>
+            <a class="menuBandeau" href="#myList">
+                <li>Ma liste d'envies</li>
+            </a>
+            <a class="menuBandeau" href="#sponsors">
+                <li>Nos Partenaires</li>
+            </a>
+            <a class="menuBandeau" href="#contacts">
+                <li>Contacts</li>
+            </a>
+            <a class="menuBandeau" href="shop.html">English version right here : <img
+                    alt="" src="images/drapeau-royaume-uni.jpg"> </a>
+        </ul>
+    </nav>
+</header>
+
+
+<section class="container about" id="about">
+    <h1>Welcome to Albine's Shop</h1>
+    <p class="presentation">
+        Bonjour tout le monde !
+        Bienvenue dans mon tout premier magasin en ligne ! Je mets en vente les dessins que j'ai fait sur le thème du
+        jeu le plus populaire: League of Legends !
+    </p>
+</section>
+
+
+<section class="container products" id="products">
+    <div class="productItem">
+        <div class="bg-img">
+            <img alt="" src="images/ahri-spirituelle.jpg">
+        </div>
+        <div class="productInfo">
+            <h2 class="ProductName">
+                Ahri Spirituelle
+            </h2>
+            <p class="productAvailability" style="color: green">Disponible</p>
+            <p class="description"> Description produit <br></p>
+            <button class="addToCart" onclick="addToQty(0)">Ajouter</button>
+            <div class="fixedPrice">
+                <p class="productPrice">15</p>
+                <p> € / Pièce</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="infoPrix">
+        <h3 class="inNotInCart">Vous n'avez pas encore ajouté ce produit dans votre panier... Ce serait dommage de
+            passer à côté !</h3>
+        <div class="addRemoveArticle">
+            <h3>Quantité : </h3>
+            <input class="quantity" max="16" min="0" onchange="calculateSubTotal()" type="number" value="0">
+        </div>
+        <div class="subTotalText">
+            <p>Sous-total :
+            <p class="myPrice">0</p>
+            </p>
+        </div>
+    </div>
+    </div>
+    <div class="productItem">
+        <div class="bg-img">
+            <img alt="" src="images/irelia-assassin.jpg">
+        </div>
+        <div class="productInfo">
+            <h2 class="ProductName">
+                Irelia Assassin
+            </h2>
+            <p class="productAvailability" style="color: green">Disponible</p>
+            <p class="description"> Description produit <br></p>
+            <button class="addToCart" onclick="addToQty(1)">Ajouter</button>
+            <div class="fixedPrice">
+                <p class="productPrice">15</p>
+                <p> € / Pièce</p>
+            </div>
+        </div>
+
+        <div class="infoPrix">
+            <h3 class="inNotInCart">Vous n'avez pas encore ajouté ce produit dans votre panier... Ce serait dommage de
+                passer à côté !</h3>
+            <div class="addRemoveArticle">
+                <h3>Quantité : </h3>
+                <input class="quantity" max="16" min="0" onchange="calculateSubTotal()" type="number" value="0">
+            </div>
+            <div class="subTotalText">
+                <p>Sous-total :
+                <p class="myPrice">0</p>
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="productItem">
+        <div class="bg-img">
+            <img alt="" src="images/neeko.jpg">
+        </div>
+        <div class="productInfo">
+            <h2 class="ProductName">
+                Neeko des parchemins de Shanghai
+            </h2>
+            <p class="productAvailability" style="color: green">Disponible</p>
+            <p class="description"> Description produit <br></p>
+            <button class="addToCart" onclick="addToQty(2)">Ajouter</button>
+            <div class="fixedPrice">
+                <p class="productPrice">15</p>
+                <p> € / Pièce</p>
+            </div>
+        </div>
+
+        <div class="infoPrix">
+            <h3 class="inNotInCart">Vous n'avez pas encore ajouté ce produit dans votre panier... Ce serait dommage de
+                passer à côté !</h3>
+            <div class="addRemoveArticle">
+                <h3>Quantité : </h3>
+                <input class="quantity" max="16" min="0" onchange="calculateSubTotal()" type="number" value="0">
+            </div>
+            <div class="subTotalText">
+                <p>Sous-total :
+                <p class="myPrice">0</p>
+                </p>
+            </div>
+        </div>
+
+    </div>
+    <div class="productItem">
+        <div class="bg-img">
+            <img alt="" src="images/evelynn-kda.jpg">
+        </div>
+        <div class="productInfo">
+            <h2 class="ProductName">
+                Evelynn KDA All/out
+            </h2>
+            <p class="productAvailability" style="color: green">Disponible</p>
+            <p class="description"> Description produit <br></p>
+            <button class="addToCart" onclick="addToQty(3)">Ajouter</button>
+            <div class="fixedPrice">
+                <p class="productPrice">15</p>
+                <p> € / Pièce</p>
+            </div>
+        </div>
+
+        <div class="infoPrix">
+            <h3 class="inNotInCart">Vous n'avez pas encore ajouté ce produit dans votre panier... Ce serait dommage de
+                passer à côté !</h3>
+            <div class="addRemoveArticle">
+                <h3>Quantité : </h3>
+                <input class="quantity" max="16" min="0" onchange="calculateSubTotal()" type="number" value="0">
+            </div>
+            <div class="subTotalText">
+                <p>Sous-total :
+                <p class="myPrice">0</p>
+                </p>
+            </div>
+        </div>
+    </div>
+    <hr>
+    <div class="totalAmount">
+        <h3>Total Price</h3>
+        <p id="totalPrice" onclick="calculateTotal()">0</p>
+        <button class="calculateTotalPrice" onclick="calculateTotal()">Calculate</button>
+        <button class="resetCart" onclick="reset()">Vider le panier</button>
+    </div>
+
+
+</section>
+
+<section class="container myList" id="myList">
+
+</section>
+
+<section class="container sponsors" id="sponsors">
+    <h2>Nous travaillons ensemble</h2>
+    <div class="logos">
+        <img src="images/logo-clients/logo-client-1.png"/>
+        <img src="images/logo-clients/logo-client-2.png"/>
+        <img src="images/logo-clients/logo-client-3.png"/>
+        <img src="images/logo-clients/logo-client-5.png"/>
+    </div>
+</section>
+
+<a href="#about">
+    <button class="accueil">Haut de page</button>
+</a>
+
+
+<footer class="container contact" id="contacts">
+
+    <ul class="contact">
+        <li><a href="instagroom.html">Instagroom |</a></li>
+        <li><a href="facebook.html">| Facebook |</a></li>
+        <li><a href="linkedon.html">| Linkedin |</a></li>
+
+    </ul>
+
+    <p>
+        Designed by @moi. Tout droit réservé | <a href="">Mentions légales</a> | <a href="">Plan du site</a>
+    </p>
+
+</footer>
+<script src="magasin-JS.js"></script>
+</body>
+</html>

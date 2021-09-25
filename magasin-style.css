@@ -1,0 +1,217 @@
+* {
+    font-family: "Microsoft PhagsPa", "Times New Roman", sans-serif;
+    max-width: 1920px;
+    text-transform: capitalize;
+    justify-content: center;}
+body {
+    width: 100%;
+    margin: 0;
+}
+.container {
+    margin-left: 10%;
+    margin-right: 10%;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+}
+
+/*HEADER/NAVBAR*/
+header, footer {
+    background-color: steelblue;
+    color: aliceblue;
+    font-size: smaller;
+}
+header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+}
+nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 40px;
+}
+.menuBandeau ul {
+    display: flex;
+    list-style: none;
+}
+.menuBandeau img {
+    height: 20px;
+    position: relative; /* permet de changer la position de l'image sans modifier le flux de la page */
+    top: 5px;
+}
+a {
+    text-decoration: none;
+    color: aliceblue;
+    line-height: 40px;
+    padding: 0 5px 0 5px;
+}
+.menuBandeau a:hover {
+    background-color: black;
+    opacity: 0.4;
+}
+a:last-child {
+    font-size: xx-small;
+}
+
+
+/*ABOUT CONTAINER*/
+.about {
+    text-align: center;
+    padding: 30px;
+}
+
+/*PRODUCTS CONTAINER*/
+.product {
+    display: grid;
+
+}
+.productItem {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+}
+
+.bg-img {
+    width: 80%;
+    background-color: black;
+    padding: 25px;
+}
+
+.productItem img {
+    display: flex;
+    width: 70%;
+    margin: auto;
+}
+
+.productItem h2 {
+    font-family: "Apple Chancery","Times New Roman", cursive;
+}
+
+.fixedPrice , .subTotalText {
+    display: flex;
+}
+.inNotInCart {
+    grid-column: span 2;
+    font-size: smaller;
+}
+.infoPrix {
+    display: flex;
+    width: 100%;
+    grid-column: span 2;
+}
+
+.infoPrix h3 {
+    width: 100%;
+    text-align: end;
+}
+
+.addRemoveArticle, .subTotalText {
+    width: 50%;
+}
+
+.addRemoveArticle {
+    display: flex;
+    width: 50%;
+    align-items: center;
+}
+
+input {
+    height: 20px;
+    margin: 5px;
+}
+
+.productAvailability {
+    font-style: italic;
+    color: gray;
+    font-size: smaller;
+}
+.myPrice {
+    display: flex;
+    flex-shrink: 1;
+}
+
+
+
+.totalAmount {
+    display: grid;
+    width: 30%;
+    align-items: center;
+    justify-content: space-around;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+}
+
+
+/*BOUTON RESETCART*/
+button {
+    border-radius: 5px;
+    background-color: steelblue;
+    border: solid 1px midnightblue;
+    font-size: smaller;
+    color: aliceblue;
+    width: 100px;
+}
+
+.resetCart {
+    /*visibility: hidden;*/
+}
+
+button:hover {
+    background-color: black;
+    opacity: 0.5;
+}
+
+
+/*SPONSORS*/
+.logos {
+    display: flex;
+    justify-content: space-around;
+
+}
+.sponsors h2 {
+    width: 100%;
+    text-align: center;
+    color: gray;
+}
+
+.sponsors img {
+    display: flex;
+    height: 30px;
+}
+
+/*BOUTON HAUT DE PAGE */
+.accueil {
+
+
+    position: fixed;
+    right: 5px;
+    bottom: 10px;
+}
+
+/*FOOTER*/
+footer a {
+    text-decoration: underline;
+}
+footer a:hover , .owner:hover {
+    color: black;
+    opacity: 0.9;
+}
+footer {
+    display: flex;
+    background-color: steelblue;
+    height: 40px;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: x-small;
+}
+.contact a {
+    text-decoration: none;
+}
+.contact ul {
+    list-style: none;
+    display: flex;
+}
+

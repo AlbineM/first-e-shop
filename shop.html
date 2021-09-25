@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Albine's shop</title>
+  <link rel="stylesheet" href="magasin-style.css">
+</head>
+<body>
+<header>
+  <nav class="menuBandeau">
+    <div class="owner">MISERY Albine</div>
+    <ul>
+      <a class="menuBandeau" href="#about"><li>Home</li></a>
+      <a class="menuBandeau" href="#products"><li>Products</li></a>
+      <a class="menuBandeau" href="#myList"><li>My wanted list</li></a>
+      <a class="menuBandeau" href="#sponsors"><li>Our partnerships</li></a>
+      <a class="menuBandeau" href="#contacts"><li>Contacts</li></a>
+      <a class="menuBandeau" href="magasin.html">Version française <em>ici</em></a>
+    </ul>
+  </nav>
+</header>
+
+
+<section class="container about" id="about">
+  <h1>Welcome to Albine's Shop</h1>
+  <p class="presentation">
+    Hello everyone !
+    Welcome to my very first online shop ! I'm selling my drawings on the very famous League of Legends game !
+  </p>
+</section>
+
+
+
+<section class="container products" id="products">
+  <div class="productItem">
+    <div class="bg-img">
+      <img src="images/ahri-spirituelle.jpg" alt="">
+    </div>
+    <div class="productInfo">
+      <h2 class="ProductName">
+        Ahri Spirituelle
+      </h2>
+      <p class="productAvailability" style="color: green">Available</p>
+      <p class="description"> Product details <br> </p>
+      <div class="fixedPrice">
+        <p class="productPrice">15</p>
+        <p> £ / piece</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="infoPrix">
+    <h3 class="inNotInCart">Vous n'avez pas encore ajouté ce produit dans votre panier... Ce serait dommage de passer à côté !</h3>
+    <div class="addRemoveArticle">
+      <h3>Quantity :  </h3>
+      <input type="number" value="0" max="16" min="0" class="quantity" onchange="calculateSubTotal()">
+    </div>
+    <div class="subTotalText">
+      <p>Subtotal : 
+      <p class="myPrice">0</p>
+      </p>
+    </div>
+  </div>
+  </div>
+  <div class="productItem">
+    <div class="bg-img">
+      <img src="images/irelia-assassin.jpg" alt="">
+    </div>
+    <div class="productInfo">
+      <h2 class="ProductName">
+        Irelia Assassin
+      </h2>
+      <p class="productAvailability" style="color: green">Available</p>
+      <p class="description"> Product details <br> </p>
+      <div class="fixedPrice">
+        <p class="productPrice">15</p>
+        <p> £ / piece</p>
+      </div>
+    </div>
+
+    <div class="infoPrix">
+      <h3 class="inNotInCart">Vous n'avez pas encore ajouté ce produit dans votre panier... Ce serait dommage de passer à côté !</h3>
+      <div class="addRemoveArticle">
+        <h3>Quantity :  </h3>
+        <input type="number" value="0" min="0" max="16" class="quantity" onchange="calculateSubTotal()">
+      </div>
+      <div class="subTotalText">
+        <p>Subtotal : 
+        <p class="myPrice">0</p>
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="productItem">
+    <div class="bg-img">
+      <img src="images/neeko.jpg" alt="">
+    </div>
+    <div class="productInfo">
+      <h2 class="ProductName">
+        Neeko des parchemins de Shanghai
+      </h2>
+      <p class="productAvailability" style="color: green">Available</p>
+      <p class="description"> Product details <br> </p>
+      <div class="fixedPrice">
+        <p class="productPrice">15</p>
+        <p> £ / piece</p>
+      </div>
+    </div>
+
+    <div class="infoPrix">
+      <h3 class="inNotInCart">Vous n'avez pas encore ajouté ce produit dans votre panier... Ce serait dommage de passer à côté !</h3>
+      <div class="addRemoveArticle">
+        <h3>Quantity :  </h3>
+        <input type="number" value="0" min="0" max="16" class="quantity" onchange="calculateSubTotal()" on>
+      </div>
+      <div class="subTotalText">
+        <p>Subtotal : 
+        <p class="myPrice">0</p>
+        </p>
+      </div>
+    </div>
+
+  </div>
+  <div class="productItem">
+    <div class="bg-img">
+      <img src="images/evelynn-kda.jpg" alt="">
+    </div>
+    <div class="productInfo">
+      <h2 class="ProductName">
+        Evelynn KDA All/out
+      </h2>
+      <p class="productAvailability" style="color: green">Available</p>
+      <p class="description"> Product details <br> </p>
+      <div class="fixedPrice">
+        <p class="productPrice">15</p>
+        <p> £ / piece</p>
+      </div>
+    </div>
+
+    <div class="infoPrix">
+      <h3 class="inNotInCart">Vous n'avez pas encore ajouté ce produit dans votre panier... Ce serait dommage de passer à côté !</h3>
+      <div class="addRemoveArticle">
+        <h3>Quantity :  </h3>
+        <input type="number" value="0" min="0" max="0" class="quantity" onchange="calculateSubTotal()">
+      </div>
+      <div class="subTotalText">
+        <p>Subtotal : 
+        <p class="myPrice">0</p>
+        </p>
+      </div>
+    </div>
+  </div>
+  <hr>
+  <div class="totalAmount">
+    <h3>Total Price</h3>
+    <p id="totalPrice" onclick="calculateTotal()">0</p>
+    <button class="calculateTotalPrice" onclick="calculateTotal()">Calculate</button>
+    <button class="resetCart" onclick="reset()">Vider le panier</button>
+  </div>
+
+
+</section>
+
+<section class="container myList" id="myList">
+
+</section>
+
+<section class="container sponsors" id="sponsors">
+  <h2>We work together</h2>
+  <div class="logos">
+    <img src="images/logo-clients/logo-client-1.png"/>
+    <img src="images/logo-clients/logo-client-2.png"/>
+    <img src="images/logo-clients/logo-client-3.png"/>
+    <img src="images/logo-clients/logo-client-5.png"/>
+  </div>
+</section>
+
+
+
+<!--DOM - Le magasin <br>-->
+<!--Vous devez créer une page web ayant le comportement d'un petit magasin.-->
+<!--<br>-->
+<!--Exemple de page-->
+<!--<br>-->
+
+<!--Des produits sont proposés à l'utilisateur avec un prix et un champs pour renseigner le nombre souhaité. Après avoir indiquer ce qu'il souhaite, l'utilisateur pourra alors cliquer sur un bouton Calculer pour afficher le coût total de ses produits.-->
+<!--<br>-->
+<!--Le style de la page est laissé à votre choix. Soyez inventif !-->
+
+<!--<br>-->
+<!--<hr>-->
+<!--<div>-->
+<!--  Quelques bonus (à faire dans l'ordre que vous souhaitez) :<br>-->
+
+<!--  Bonus N°1-->
+<!--  Faire en sorte que le prix change automatiquement à chaque fois que l'utilisateur modifie le nombre d'éléments qu'il souhaite pour chaque produit.-->
+<!--  <br>-->
+
+<!--  Bonus N°2-->
+<!--  Ajouter un bouton Vider le panier permettant à l'utilisateur de réinitialiser tout son panier (remettre à 0 tous les champs).-->
+<!--  <br>-->
+<!--  Bonus N°3-->
+<!--  Afficher le sous-total de chaque produit.-->
+<!--  <br>-->
+<!--  Exemple de page-->
+<!--  <br>Bonus N°4-->
+<!--  Une grosse ration équivaut à 5 petites rations. Faites en sorte que lorsque l'utilisateur saisi 5 petites rations ou plus, le nombre de petites et grosses rations soient équilibré automatiquement.-->
+<!--  Par exemple, si l'utilisateur à saisi 12 petites rations et 1 grosse ration, la page adapte les remplace par 2 petites rations et 3 grosses rations.-->
+<!--  <br>-->
+<!--  Bonus N°5-->
+<!--  Notre utilisateur n'a pas un porte-monnaie extensible : avertissez-le lorsqu'il s'approche d'un solde trop élevé en changeant la couleur du total.-->
+<!--  Si le prix est compris entre 0$ et 50$, affichez-le en vert, en orange s'il est entre 50$ et 75$ et en rouge s'il est au dessus de 75$.-->
+<!--  <br>-->
+<!--  Bonus N°6-->
+<!--  Notre utilisateur n'a pas des poches infinies, il ne peut donc pas transporter plus d'un certain nombre de produit.-->
+<!--  Faites en sorte qu'il ne puisse pas emporter plus de 15 produits avec lui (au total) en l’empêchant d'ajouter un produit supplémentaire si ce nombre est atteint. </div>-->
+
+
+<a href="#about"><button class="accueil">Home Page</button></a>
+
+
+<footer class="container contact" id="contacts">
+
+  <ul class="contact">
+    <li><a href="instagroom.html" >Instagroom |</a></li>
+    <li><a href="facebook.html" >| Facebook |</a></li>
+    <li><a href="linkedon.html" >| Linkedin |</a></li>
+  </ul>
+
+  <p>
+    Designed by @moi. Tout droit réservé | <a href="">Mentions légales</a> | <a href="">Plan du site</a>
+  </p>
+
+</footer>
+<script src="magasin-JS.js"></script>
+</body>
+</html>
